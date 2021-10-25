@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "my-app-4bf7a"
+  },
+  "targets": {
+    "my-app-4bf7a": {
+      "hosting": {
+        "My-App": [
+          "my-app-4bf7a"
+        ]
+      }
+    }
+  }
+}
