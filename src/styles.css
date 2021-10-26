@@ -14,16 +14,6 @@ body {
   margin: 0;
 }
 
-.title {
-  margin-top: 3%;
-}
-
-.title h2 {
-  font-size: 40px;
-  text-align: center;
-}
-
-
 .btn {
   width: 200px;
   margin-bottom: 20px;
@@ -33,13 +23,6 @@ body {
   #cont-title h1 {
       font-size: 50px;
   }
-}
-.btn-primary {
-  margin-bottom: 20px;
-  margin: auto;
-  position:relative;
-  top:50%;
-  left:10%;
 
 }
 .body-form {
@@ -79,25 +62,20 @@ form {
   text-align: center;
 }
 
-form .grupo {
-  position: relative;
-  margin: 45px;
-}
-
 input {
   background: none;
   color: #c6c6c6;
   font-size: 18px;
   padding: 10px 10px 10px 5px;
   display: block;
-  width: 100%;
+  width: 95%;
   border: none;
   border-bottom: 1px solid #49454567;
 }
 
 input:focus {
   outline: none;
-  color: rgb(94, 93, 93);
+  color: black;
 }
 
 label {
@@ -117,18 +95,21 @@ input:valid~label .date {
   display: block;
   top: -14px;
   font-size: 13px;
-  color: rgba(186,7,7,1);
 }
-
-
 
 .imgs {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 50px;
+  margin-block-end: 50px;
   text-align: center;
 }
+.logo{
+   display: flex;
+  justify-content: center;
+  margin-block-end: 50px;
 
+}
 
 
 .imgs img {
@@ -163,4 +144,17 @@ input[type=number]::-webkit-outer-spin-button {
   form {
       width: 40%;
   }
+}
+
+
+footer {
+  background-color: rgb(112, 179, 235);
+display: inline-block;
+position: absolute;
+text-decoration: none;
+width: 100%;
+height: auto;
+text-align: center;
+margin-right: 10px;
+line-height: 45px;
 }

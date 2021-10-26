@@ -17,6 +17,7 @@
 
       <table class="table mt-5 table-striped">
 
+
         <thead>
 
           <tr>
@@ -34,9 +35,9 @@
         <tbody>
           <tr>
 
-            <td>Pera</td>
+            <td *ngFor="let item of ListaCosas | async">{{item.nombre}}</td>
 
-            <td>2</td>
+            <td *ngFor="let item of ListaCosas | async"> {{item.cantidad}} </td>
 
             <td>
 

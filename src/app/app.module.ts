@@ -1,11 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireModule, FirebaseApp } from '@angular/fire/compat';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomepageComponent } from './homepage/homepage.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { SignUppageComponent } from './sign-uppage/sign-uppage.component';
 import { EmailComponent } from './email/email.component';
@@ -13,6 +11,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ListaCosasComponent } from './components/lista-cosas/lista-cosas.component';
 import { NuevaCosaComponent } from './components/nueva-cosa/nueva-cosa.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBsMGoH3PRECahAkF_LGYt7gQQ4OA2rD28",
@@ -25,7 +24,6 @@ const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent,
     LoginpageComponent,
     SignUppageComponent,
     EmailComponent,
@@ -38,7 +36,8 @@ const firebaseConfig = {
     FormsModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AppRoutingModule],
+    AppRoutingModule,
+  ReactiveFormsModule],
     providers: [],
     bootstrap: [AppComponent]
     })

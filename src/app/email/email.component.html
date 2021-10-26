@@ -1,9 +1,33 @@
 <div class="form-container">
-  <h2>Login</h2>
+  <div class="body-form">
   <form #formData='ngForm' (ngSubmit)='onSubmit(formData)'>
-    <input type="text" placeholder="Email address" (ngModel)="email" name="email" class="input-txt" required>
-    <input type="password" placeholder="Password" (ngModel)="password" name="password" class="input-txt" required>
-    <button type="submit" [disabled]="!formData.valid" routerLink="/lista-cosas" class="auth-btn">Log in</button>
+
+    <div class="form">
+      <h1>REGISTRO</h1>
+      <hr>
+      <br>
+      <br>
+
+    <input type="text" placeholder="Dirección de correo electrónico" (ngModel)="email" name="email" class="input" required>
+    <br>
+    <input type="password" placeholder="Contraseña" (ngModel)="password" name="password" class="input" required>
+    <br>
+    <button type="submit" [disabled]="!formData.valid" routerLink="/lista-cosas" class="btn" >Entrar</button>
+    <br>
+    <br>
+
+  <a routerLink="/signup" routerLinkActive="active" class="btn" >¿No tiene cuenta?
+    <br>
+     <strong>Cree una aquí</strong></a>
+    </div>
   </form>
-  <a routerLink="/signup" routerLinkActive="active" class="create-account-txt">No account? <strong>Create one here</strong></a>
+  </div>
 </div>
+
+  <footer>
+        <p>Copyright &copy; Fundación Universitaria Konrad Lorenz | 2021</p>
+
+  </footer>
+
+
+
