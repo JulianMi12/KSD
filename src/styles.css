@@ -19,6 +19,30 @@ body {
   margin-bottom: 20px;
 }
 
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x)/ -2);
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-2{
+  margin-bottom: 20px;
+  height:30px;
+    width:100px;
+    margin: -20px -50px;
+    position:relative;
+    top:50%;
+    left:50%;
+
+}
 @media (min-width:700px) {
   #cont-title h1 {
       font-size: 50px;
@@ -134,6 +158,21 @@ input:valid~label .date {
   color: #080101;
 }
 
+.btn-2 {
+  background: white;
+  text-decoration: none;
+  color: #080101;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 30px;
+  transition: background 0.5s;
+}
+
+.btn-2:hover {
+  background: rgb(135, 139, 135);;
+  color: #080101;
+}
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -146,6 +185,30 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 
+#cont-title {
+  background-color: rgb(112, 179, 235);
+  text-align: center;
+  padding: 30px 0;
+  width: 100%;
+}
+
+
+@media (min-width:700px) {
+  #cont-title h1 {
+      font-size: 50px;
+  }
+}
+
+
+
+.title {
+  margin-top: 3%;
+}
+
+.title h2 {
+  font-size: 40px;
+  text-align: center;
+}
 
 footer {
   background-color: rgb(112, 179, 235);

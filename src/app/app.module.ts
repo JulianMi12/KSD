@@ -10,7 +10,6 @@ import { EmailComponent } from './email/email.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ListaCosasComponent } from './components/lista-cosas/lista-cosas.component';
 import { NuevaCosaComponent } from './components/nueva-cosa/nueva-cosa.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const firebaseConfig = {
@@ -30,7 +29,6 @@ const firebaseConfig = {
     ProfileComponent,
     ListaCosasComponent,
     NuevaCosaComponent,
-    NavbarComponent,
   ],imports: [
     BrowserModule,
     FormsModule,

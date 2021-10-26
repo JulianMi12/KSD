@@ -5,7 +5,6 @@ import { SignUppageComponent } from './sign-uppage/sign-uppage.component';
 import { EmailComponent } from './email/email.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ListaCosasComponent } from './components/lista-cosas/lista-cosas.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { NuevaCosaComponent } from './components/nueva-cosa/nueva-cosa.component';
 
 const routes: Routes = [
@@ -15,7 +14,6 @@ const routes: Routes = [
   { path: 'signup', component: SignUppageComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'lista-cosas', component: ListaCosasComponent},
-  { path: 'nav-bar', component: NavbarComponent},
   { path: 'nueva-cosa', component: NuevaCosaComponent}
 ];
 

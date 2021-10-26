@@ -1,58 +1,71 @@
-<app-navbar></app-navbar>
 
 
-<div class="container mt-4">
+<body>
+    <div id="main-container">
+        <header>
 
-  <div class="card">
-
-    <div class="card-body">
-
-      <span class="h3">
-
-        Cosas
-
-      </span>
-
-      <button class="btn btn-dark" routerLink="/nueva-cosa">Nuevo</button>
-
-      <table class="table mt-5 table-striped">
+            <div id="cont-title" >
+                    <img src="./assets/Logo.png" alt="" >
+            </div>
+        </header>
+        <br>
+        <br>
+        <br>
+                <div class="title">
+            <h2>Estudiante</h2>
+        </div>
 
 
-        <thead>
+    <button class="btn-2" routerLink="/nueva-cosa">Nuevo</button>
+        <br>
+        <br>
+        <br>
 
-          <tr>
+        <div class="body-form">
+                    <table class="table table-hover m">
+                        <thead>
+                            <tr>
+                                <th scope="col">CODIGO</th>
+                                <th scope="col">NOMBRES</th>
+                                <th scope="col">APELLIDOS</th>
+                                <th scope="col">CURSO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-primary">
 
-            <th scope="col">Nombre</th>
 
-            <th scope="col">Cantidad</th>
+                                <td *ngFor="let item of ListaCosas | async">{{item.nombre}}</td>
 
-            <th scope="col"></th>
+                                <td *ngFor="let item of ListaCosas | async"> {{item.cantidad}} </td>
 
-          </tr>
+                                <td>
 
-        </thead>
+                                  <li class="fas fa-edit fa-lg text-info" style="margin-right: 5px;"></li>
 
-        <tbody>
-          <tr>
+                                  <li class="fas fa-trash-alt fa-lg text-danger"></li>
 
-            <td *ngFor="let item of ListaCosas | async">{{item.nombre}}</td>
+                                </td>
 
-            <td *ngFor="let item of ListaCosas | async"> {{item.cantidad}} </td>
+                              </tr>
 
-            <td>
+                            <tr class="table-secondary">
+                                <th scope="row">2</th>
+                                <td>Aubert Pinot Noir Sonoma Coast UV Vineyard.</td>
+                                <td>2018</td>
+                                <td>532</td>
+                                <td>312</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer >
+            <p class="m-0 text-center text-black ">Copyright &copy; Fundación Universitaria Konrad Lorenz | 2021</p>
+    </footer>
+</body>
 
-              <li class="fas fa-edit fa-lg text-info" style="margin-right: 5px;"></li>
-
-              <li class="fas fa-trash-alt fa-lg text-danger"></li>
-
-            </td>
-
-          </tr>
-        </tbody>
-
-      </table>
-
-    </div>
-
-  </div>
-</div>
