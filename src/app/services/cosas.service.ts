@@ -8,4 +8,7 @@ export class CosasService {
   agregarCosa(cosa: any): Promise<any>{
     return this.firestore.collection('cosas').add(cosa);
   }
-}
+    agregarDocente(docente:any):Promise<any>{
+      return this.firestore.collection('docentes').add(docente);
+    }
+  }

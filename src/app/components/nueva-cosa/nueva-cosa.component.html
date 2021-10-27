@@ -1,28 +1,48 @@
 
-<div class="container pt-4">
-  <div class="row">
-    <div class="col col-lg-6 offset-lg-3">
-      <div class="card text-center">
-        <div class="card-body">
-          <h3>Agregar empleado</h3>
+  <div id="main-container">
+      <header>
+
+          <div id="cont-title" >
+                  <img src="./assets/Logo.png" alt="" >
+          </div>
+      </header>
+      <br>
+      <br>
+      <br>
+      <div class="form-container">
+        <div class="body-form">
           <span style="color: black;" *ngIf="enviado && createCosa.invalid "> Todos los campos son requeridos. </span>
+          <span style="color: black;" *ngIf="enviado && createCosa.valid "> Se creo existosamente </span>
           <form action="" [formGroup]="createCosa" (ngSubmit)="agregarCosa()">
-            <div class="row">
-              <div class="col">
+                <div class="form">
+                  <h1>Inscripción de Curso</h1>
+
+                <input class="form-control" type="number" formControlName="codigo" placeholder="Codigo">
+                <br>
                 <input class="form-control" type="text" formControlName="nombre" placeholder="Nombre">
+                <br>
+
+                <input class="form-control" type="text" formControlName="apellido" placeholder="Apellido">
+                <br>
+
+                <input class="form-control" type="text" formControlName="curso" placeholder="Curso">
+
+                <br>
+
+                <button type="submit" class="btn" routerLink="/lista-cosas">Volver</button>
+                <br>
+
+                <button type="submit" class="btn">Crear</button>
               </div>
-              <div class="col">
-                <input class="form-control" type="number" formControlName="cantidad" placeholder="Cantidad">
-              </div>
-            </div>
-            <div class="mt-3">
-              <button type="text" class="btn btn-primary" style="margin-right: 5px;"
-                routerLink="/lista-cosas">Volver</button>
-              <button type="submit" class="btn btn-primary">Guardar</button>
-            </div>
           </form>
         </div>
       </div>
-    </div>
   </div>
-</div>
+
+
+<br>
+<br>
+<br>
+<footer >
+        <p class="m-0 text-center text-black ">Copyright &copy; Fundación Universitaria Konrad Lorenz | 2021</p>
+</footer>

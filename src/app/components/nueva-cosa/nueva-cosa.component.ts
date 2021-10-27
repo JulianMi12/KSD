@@ -1,3 +1,4 @@
+import { ToastrModule, ToastrService } from 'ngx-toastr';
 import { CosasService } from './../../services/cosas.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -11,8 +12,10 @@ export class NuevaCosaComponent implements OnInit {
   enviado = false;
   constructor(private fb: FormBuilder, private cosaService: CosasService) {
     this.createCosa = this.fb.group({
+      codigo: ['', Validators.required],
       nombre: ['', Validators.required],
-      cantidad: ['', Validators.required]
+      apellido: ['', Validators.required],
+      curso: ['', Validators.required]
     }
     );
   }
@@ -30,9 +33,12 @@ export class NuevaCosaComponent implements OnInit {
 
     const cosa: any = {
 
+      codigo: this.createCosa.value.codigo,
       nombre: this.createCosa.value.nombre,
+      apellido: this.createCosa.value.apellido,
+      curso: this.createCosa.value.curso,
 
-      cantidad: this.createCosa.value.cantidad
+
 
     }
 

@@ -8,6 +8,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'KSD';
 
-  prueba= 'Esto no es KSD';
-  fruta='Manzana';
 }

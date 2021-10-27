@@ -1,0 +1,53 @@
+<div id="main-container">
+  <header>
+
+      <div id="cont-title" >
+              <img src="./assets/Logo.png" alt="" >
+      </div>
+  </header>
+  <br>
+  <br>
+  <br>
+  <div class="form-container">
+    <div class="body-form">
+      <span style="color: black;" *ngIf="enviado && createDocente.invalid "> Todos los campos son requeridos. </span>
+      <span style="color: black;" *ngIf="enviado && createDocente.valid "> Se creo existosamente </span>
+      <form action="" [formGroup]="createDocente" (ngSubmit)="agregarDocente()">
+            <div class="form">
+              <h1>Inscripción de Docente</h1>
+
+            <input class="form-control" type="number" formControlName="codigo" placeholder="Codigo">
+            <br>
+            <input class="form-control" type="text" formControlName="nombre" placeholder="Nombre">
+            <br>
+
+            <input class="form-control" type="text" formControlName="apellido" placeholder="Apellido">
+            <br>
+
+            <input class="form-control" type="text" formControlName="cod_curso" placeholder="Codigo del Curso">
+
+            <br>
+            <input class="form-control" type="text" formControlName="nom_curso" placeholder="Nombre del Curso">
+
+            <br>
+            <input class="form-control" type="text" formControlName="area" placeholder="Area Especializada">
+
+            <br>
+
+            <button type="submit" class="btn" routerLink="/entidad">Volver</button>
+            <br>
+
+            <button type="submit" class="btn">Crear</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<br>
+<br>
+<br>
+<footer >
+    <p class="m-0 text-center text-black ">Copyright &copy; Fundación Universitaria Konrad Lorenz | 2021</p>
+</footer>

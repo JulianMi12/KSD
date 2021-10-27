@@ -7,10 +7,13 @@ import { AppComponent } from './app.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { SignUppageComponent } from './sign-uppage/sign-uppage.component';
 import { EmailComponent } from './email/email.component';
-import { ProfileComponent } from './profile/profile.component';
 import { ListaCosasComponent } from './components/lista-cosas/lista-cosas.component';
 import { NuevaCosaComponent } from './components/nueva-cosa/nueva-cosa.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { EntidadComponent } from './EntidadEducativa/entidad/entidad.component';
+import { NuevoEntidadComponent } from './EntidadEducativa/nuevo-entidad/nuevo-entidad.component';
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyBsMGoH3PRECahAkF_LGYt7gQQ4OA2rD28",
@@ -26,16 +29,18 @@ const firebaseConfig = {
     LoginpageComponent,
     SignUppageComponent,
     EmailComponent,
-    ProfileComponent,
     ListaCosasComponent,
     NuevaCosaComponent,
+    EntidadComponent,
+    NuevoEntidadComponent,
   ],imports: [
     BrowserModule,
     FormsModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AppRoutingModule,
-  ReactiveFormsModule],
+  ReactiveFormsModule,
+ToastrModule.forRoot()],
     providers: [],
     bootstrap: [AppComponent]
     })

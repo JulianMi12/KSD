@@ -1,21 +1,23 @@
+
 import { AngularFirestore} from '@angular/fire/compat/firestore'
 import { Component, OnInit, Query } from '@angular/core'
 import { Observable } from 'rxjs'
 
 @Component({
-  selector: 'app-lista-cosas',
-  templateUrl: './lista-cosas.component.html',
+  selector: 'app-entidad',
+  templateUrl: './entidad.component.html',
   styleUrls: ['./css/bootstrap.min.css']
-})
-export class ListaCosasComponent implements OnInit {
 
-ListaCosas: Observable<any[]> | any;
+})
+export class EntidadComponent implements OnInit {
+
+  ListaDocente: Observable<any[]> | any;
   constructor(firestore:AngularFirestore) {
-    this.ListaCosas = firestore.collection('cosas').valueChanges();
+    this.ListaDocente = firestore.collection('docentes').valueChanges();
 
   }
-
   ngOnInit(): void {
   }
 
 }
+
