@@ -20,9 +20,11 @@ cosas: any[] = [];
   }
 
   ngOnInit(): void {
+    this.getCosas();
   }
 
   eliminarCosa(id: string) {
+    console.log("##### en el component.ts ID: " + id);
     this.cosaService.eliminarCosa(id).then(() => {
       console.log('cosa eliminada con éxito');
       this.toastr.error('registro eliminado', 'cosa eliminada', {

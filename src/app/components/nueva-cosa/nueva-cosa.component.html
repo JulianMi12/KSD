@@ -1,49 +1,63 @@
+<app-navbar></app-navbar>
+<div class="container" id="main-container">
 
-  <div id="main-container">
-      <header>
+  <div class="card col-7">
+    <div class="card-body">
+      <h1>{{titulo}}</h1>
+      <form [formGroup]="createCosa" (ngSubmit)="agregarCosa()">
 
-          <div id="cont-title" >
-                  <img src="./assets/Logo.png" alt="" >
-          </div>
-      </header>
-      <br>
-      <br>
-      <br>
+        <div class="form-group">
+          <label for="codigo">Código</label>
+          <input id="codigo" class="form-control" type="number" formControlName="codigo" placeholder="Codigo">
+
+
+
+        </div>
+        <div class="form-group">
+          <label for="nombre" class="form-check-label" for="exampleCheck1">Check me out</label>
+          <input id="nombre" class="form-control" type="text" formControlName="nombre" placeholder="Nombre">
+
+
+        </div>
+        <div class="form-group">
+          <label for="apellido">Password</label>
+          <input id="apellido" class="form-control" type="text" formControlName="apellido" placeholder="Apellido">
+
+
+
+        </div>
+        <div class="form-group">
+          <label for="curso">Password</label>
+
+
+          <input id="curso" class="form-control" type="text" formControlName="curso" placeholder="Curso">
+
+
+        </div>
+        <div class="form-group mt-10">
+          <button type="submit" class="btn btn-primary" *ngIf="id==null">Crear</button>
+          <button type="submit" class="btn btn-primary" *ngIf="id!=null">Actualizar</button>
+          <button type="submit" class="btn btn-primary" routerLink="/lista-cosas">Volver</button>
+        </div>
+      </form>
+
+
       <div class="form-container">
         <div class="body-form">
           <span style="color: black;" *ngIf="enviado && createCosa.invalid "> Todos los campos son requeridos. </span>
           <span style="color: black;" *ngIf="enviado && createCosa.valid "> Se creo exitosamente </span>
           <form action="" [formGroup]="createCosa" (ngSubmit)="agregarCosa()">
-                <div class="form">
-            <h1>{{titulo}}</h1>
+            <div class="form">
 
 
-                <input class="form-control" type="number" formControlName="codigo" placeholder="Codigo">
-                <br>
-                <input class="form-control" type="text" formControlName="nombre" placeholder="Nombre">
-                <br>
 
-                <input class="form-control" type="text" formControlName="apellido" placeholder="Apellido">
-                <br>
 
-                <input class="form-control" type="text" formControlName="curso" placeholder="Curso">
 
-                <br>
-
-                <button type="submit" class="btn" routerLink="/lista-cosas">Volver</button>
-                <br>
-
-                <button type="submit" class="btn">Crear</button>
-              </div>
+            </div>
           </form>
         </div>
       </div>
+    </div>
   </div>
 
-
-<br>
-<br>
-<br>
-<footer >
-        <p class="m-0 text-center text-black ">Copyright &copy; Fundación Universitaria Konrad Lorenz | 2021</p>
-</footer>
+</div>

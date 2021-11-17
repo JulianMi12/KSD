@@ -24,15 +24,16 @@
             <input class="form-control" type="text" formControlName="apellido" placeholder="Apellido">
             <br>
 
-            <input class="form-control" type="text" formControlName="cod_curso" placeholder="Codigo del Curso">
-
-            <br>
-            <input class="form-control" type="text" formControlName="nom_curso" placeholder="Nombre del Curso">
-
+            <select (change)="actualizarTipo($event)"  class="form-select" type="text" formControlName="curso">
+              <option *ngFor="let curso of cursos" value="{{curso.id}}">{{curso.nombre}}</option>
+            </select>
             <br>
             <input class="form-control" type="text" formControlName="area" placeholder="Area Especializada">
+            <textarea id="editor">
 
-            <br>
+
+            </textarea>
+                        <br>
 
             <button type="submit" class="btn" routerLink="/entidad">Volver</button>
             <br>

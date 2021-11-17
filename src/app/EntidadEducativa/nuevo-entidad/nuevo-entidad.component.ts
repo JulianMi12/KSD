@@ -9,18 +9,21 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class NuevoEntidadComponent implements OnInit {
   createDocente: FormGroup;
   enviado = false;
+  cursos: any[] = [];
+  cursoSeleccionado: string = "curso";
+  nombreCurso: string = "";
   constructor(private fb: FormBuilder, private cosaService: CosasService) {
     this.createDocente = this.fb.group({
       codigo: ['', Validators.required],
       nombre: ['', Validators.required],
       apellido: ['', Validators.required],
-      cod_curso: ['', Validators.required],
-      nom_curso: ['', Validators.required],
+      cursos: ['', Validators.required],
       area: ['', Validators.required]
     }
     );
   }
   ngOnInit(): void {
+    this.getCursos();
   }
 
 
@@ -37,12 +40,12 @@ export class NuevoEntidadComponent implements OnInit {
       codigo: this.createDocente.value.codigo,
       nombre: this.createDocente.value.nombre,
       apellido: this.createDocente.value.apellido,
-      cod_curso: this.createDocente.value.cod_curso,
-      nom_curso: this.createDocente.value.nom_curso,
+      curso: this.createDocente.value.curso,
+      nombreCurso: this.nombreCurso,
       area: this.createDocente.value.area
-        }
+    }
 
-this.cosaService.agregarDocente(docente).then(() => {
+    this.cosaService.agregarDocente(docente).then(() => {
 
       console.log("registro exitoso");
 
@@ -51,6 +54,42 @@ this.cosaService.agregarDocente(docente).then(() => {
     })
 
   }
+  actualizarTipo($event: any) {
 
+    this.nombreCurso = $event.target.options[$event.target.options.selectedIndex].text;
+
+  }
+
+  getCursos() {
+
+    this.cosaService.getCursos().subscribe(
+
+      data => {
+
+        this.cursos = [];
+
+        data.forEach((element: any) => {
+
+          // console.log(element.payload.doc.id);
+
+          // console.log(element.payload.doc.data());
+
+          this.cursos.push({
+
+            id: element.payload.doc.id,
+
+            ...element.payload.doc.data()
+
+          })
+
+        });
+
+        console.log(this.cursos);
+
+      }
+
+    );
+
+  }
 
 }

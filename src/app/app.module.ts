@@ -14,6 +14,8 @@ import { EntidadComponent } from './EntidadEducativa/entidad/entidad.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NuevoEntidadComponent } from './EntidadEducativa/nuevo-entidad/nuevo-entidad.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 
 const firebaseConfig = {
@@ -34,8 +36,10 @@ const firebaseConfig = {
     NuevaCosaComponent,
     EntidadComponent,
     NuevoEntidadComponent,
+    NavbarComponent,
   ],imports: [
     BrowserModule,
+    EditorModule,
     FormsModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(firebaseConfig),
