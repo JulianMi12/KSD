@@ -12,10 +12,11 @@
       <div class="form-container">
         <div class="body-form">
           <span style="color: black;" *ngIf="enviado && createCosa.invalid "> Todos los campos son requeridos. </span>
-          <span style="color: black;" *ngIf="enviado && createCosa.valid "> Se creo existosamente </span>
+          <span style="color: black;" *ngIf="enviado && createCosa.valid "> Se creo exitosamente </span>
           <form action="" [formGroup]="createCosa" (ngSubmit)="agregarCosa()">
                 <div class="form">
-                  <h1>Inscripción de Curso</h1>
+            <h1>{{titulo}}</h1>
+
 
                 <input class="form-control" type="number" formControlName="codigo" placeholder="Codigo">
                 <br>

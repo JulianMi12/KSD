@@ -10,8 +10,9 @@ import { EmailComponent } from './email/email.component';
 import { ListaCosasComponent } from './components/lista-cosas/lista-cosas.component';
 import { NuevaCosaComponent } from './components/nueva-cosa/nueva-cosa.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ToastrModule } from 'ngx-toastr';
 import { EntidadComponent } from './EntidadEducativa/entidad/entidad.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NuevoEntidadComponent } from './EntidadEducativa/nuevo-entidad/nuevo-entidad.component';
 
 
@@ -40,7 +41,8 @@ const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AppRoutingModule,
   ReactiveFormsModule,
-ToastrModule.forRoot()],
+  ToastrModule.forRoot(),
+  BrowserAnimationsModule],
     providers: [],
     bootstrap: [AppComponent]
     })

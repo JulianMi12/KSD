@@ -16,7 +16,8 @@ const routes: Routes = [
   { path: 'lista-cosas', component: ListaCosasComponent},
   { path: 'nueva-cosa', component: NuevaCosaComponent},
   { path: 'entidad', component: EntidadComponent},
-  { path: 'nuevo-entidad', component: NuevoEntidadComponent}
+  { path: 'nuevo-entidad', component: NuevoEntidadComponent},
+  { path: 'edita-cosa/:id', component: NuevaCosaComponent}
 ];
 
 @NgModule({

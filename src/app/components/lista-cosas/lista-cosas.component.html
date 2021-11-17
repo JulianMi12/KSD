@@ -1,7 +1,5 @@
-<link rel="stylesheet" href="css/bootstrap.min.css">
 
 
-<body>
     <div id="main-container">
         <header>
 
@@ -13,7 +11,7 @@
         <br>
         <br>
                 <div class="title">
-            <h2>Estudiante</h2>
+            <h2>ESTUDIANTE</h2>
         </div>
     <button class="btn-2" routerLink="/nueva-cosa">Nuevo</button>
         <br>
@@ -39,8 +37,10 @@
                                 <td > {{item.nombre}} </td>
                                 <td > {{item.apellido}} </td>
                                 <td > {{item.curso}} </td>
-                               <td align="center"><li class="fas fa-edit fa-lg text-info" style="margin-right: 5px;"></li></td>
-                                <td align="center"><li class="fas fa-trash-alt fa-lg text-danger"></li></td>
+                               <td align="center">
+                                <li class="fas fa-edit fa-lg text-info" style="margin-right: 5px;" [routerLink]="['/edita-cosa/',item.id]"></li>
+                              </td>
+                                <td align="center"> <li class="fas fa-trash-alt fa-lg text-danger" (click)="eliminarCosa(item.id)"></li></td>
                                 <td>
                               </tr>
                         </tbody>
@@ -53,8 +53,4 @@
     <br>
     <br>
     <br>
-    <footer >
-            <p class="m-0 text-center text-black ">Copyright &copy; Fundación Universitaria Konrad Lorenz | 2021</p>
-    </footer>
-</body>
 
